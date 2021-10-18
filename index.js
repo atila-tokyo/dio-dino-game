@@ -23,12 +23,12 @@ const jump = () => {
                     clearInterval(downInterval);
                     isJumping = false;
                 } else {
-                    position -= 20;
+                    position -= 40;
                     dino.style.bottom = position + 'px';
                 }
             }, 20);
         } else {
-            position += 20;
+            position += 40;
             dino.style.bottom = position + "px";
         }
     }, 20);
@@ -45,12 +45,12 @@ const createCactus = () => {
             background.removeChild(cactus);
         } else if (cactusPosition > 0 && cactusPosition < 60 && position < 60) {
             clearInterval(leftInterval);
-            document.body.innerHTML = '<h1 class="game-over">Game Over</h1>';
+            document.body.innerHTML = '<h1 class="game-over"><strong>GAME OVER</strong></h1>';
         } else {
             cactusPosition -= 10;
             cactus.style.left = cactusPosition + "px";
         }
-    }, 20);
+    }, 40);
 
     setTimeout(createCactus, randomTime);
 
