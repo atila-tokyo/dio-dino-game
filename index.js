@@ -37,7 +37,12 @@ const jump = () => {
 
 const createCactus = () => {
     const cactus = document.createElement('div');
+    let cactusPosition = 1000;
+
     cactus.classList.add('cactus');
+    cactus.style.left = cactusPosition + "px";
     background.appendChild(cactus);
 };
+
+createCactus();
 document.addEventListener('keyup', handleKeyUp);
